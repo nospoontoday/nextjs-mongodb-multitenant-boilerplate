@@ -9,7 +9,7 @@ set +o allexport
 if [ "$NODE_ENV" = "production" ]
 then
   echo "Starting in production mode"
-  docker-compose -f docker-compose.prod.yml up --build
+  docker-compose -f docker-compose.yml up --build --force-recreate
 elif [ "$NODE_ENV" = "development" ]
 then
   echo "Starting in development mode"
